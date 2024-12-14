@@ -59,6 +59,9 @@ source $ITEM_DIR/media.sh
 	source $ITEM_DIR/calendar.sh
         source $ITEM_DIR/volume.sh
 	source $ITEM_DIR/cpu.sh
+	source $ITEM_DIR/ram.sh
+	source $ITEM_DIR/pressure.sh
+	source $ITEM_DIR/network.sh
 
 ##### Finalizing Setup #####
 # The below command is only needed at the end of the initial configuration to
