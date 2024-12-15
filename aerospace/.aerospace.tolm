@@ -20,7 +20,7 @@ after-startup-command = [
     # Install JankyBorders first, it has a built-in detection of already running process,
     # so it won't be run twice on AeroSpace restart
     'exec-and-forget borders active_color=0xffffffff inactive_color=0xffa1a1a1 width=5.0',
-    'exec-and-forget sketchybar'
+    'exec-and-forget /bin/bash -c "sleep 5 && /opt/homebrew/bin/sketchybar"'
 ]
 
 exec-on-workspace-change = [
@@ -165,7 +165,7 @@ alt-ctrl-d = 'workspace D'
 alt-ctrl-f = 'workspace F'
 #alt-ctrl-g = 'workspace G'
 alt-ctrl-i = 'workspace I'
-#alt-ctrl-m = 'workspace M'
+alt-ctrl-m = 'workspace M'
 #alt-ctrl-n = 'workspace N'
 #alt-ctrl-o = 'workspace O'
 #alt-ctrl-p = 'workspace P'
@@ -198,7 +198,7 @@ alt-ctrl-shift-d = 'move-node-to-workspace D'
 alt-ctrl-shift-f = 'move-node-to-workspace F'
 #alt-ctrl-shift-g = 'move-node-to-workspace G'
 alt-ctrl-shift-i = 'move-node-to-workspace I'
-#alt-ctrl-shift-m = 'move-node-to-workspace M'
+alt-ctrl-shift-m = 'move-node-to-workspace M'
 #alt-ctrl-shift-n = 'move-node-to-workspace N'
 #alt-ctrl-shift-o = 'move-node-to-workspace O'
 #alt-ctrl-shift-p = 'move-node-to-workspace P'
@@ -299,6 +299,10 @@ run = 'move-node-to-workspace C'
 if.app-id = 'com.microsoft.teams2'
 run = 'move-node-to-workspace C'
 
+# workspace F apps : Finder
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'move-node-to-workspace F'
 
 # workspace I apps : IAs (perplexity, chatgpt)
 [[on-window-detected]]
@@ -333,5 +337,5 @@ if.app-id = 'com.apple.reminders'
 run = ['layout tiling', 'move-node-to-workspace U']
 
 
-
+   
 
