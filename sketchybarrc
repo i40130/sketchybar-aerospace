@@ -18,13 +18,15 @@ ITEM_DIR="$CONFIG_DIR/items"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar position=top		\
-		 height=32		\
-		 blur_radius=30 	\
-		 color=$BAR_COLOR	\
-		 sticky=off		\
-		 padding-left=10	\	\
-		 padding-rigth=10       
+sketchybar --bar  		\
+	position=top		\
+	height=32		\
+	blur_radius=30 		\
+	color=$BAR_COLOR	\
+	sticky=off		\      
+	padding_left=10        	\
+	padding_right=10
+
 
 ##### Changing Defaults #####
 # We now change some default values, which are applied to all further items.
@@ -68,4 +70,3 @@ source $ITEM_DIR/media.sh
 # force all scripts to run the first time, it should never be run in an item script.
 
 sketchybar --update
-

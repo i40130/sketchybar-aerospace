@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAME ="ram" #Definir el nombre dle item en SketchyBar
+NAME="ram" #Definir el nombre dle item en SketchyBar
 
 # Obtener la memoria total y libre en megabytes
 MEM_TOTAL=$(sysctl -n hw.memsize)                   # Memoria total en bytes
